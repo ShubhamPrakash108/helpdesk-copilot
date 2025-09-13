@@ -134,7 +134,7 @@ graph TD
 ### Quick Start
 ```bash
 # Clone the repository
-git clone https://github.com/ShubhamPrakash108/support-copilot-ai.git
+git clone https://github.com/ShubhamPrakash108/helpdesk-copilot.git
 cd customer-support-system
 
 # Install dependencies
