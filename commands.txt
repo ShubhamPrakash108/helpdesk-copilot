@@ -1,0 +1,4 @@
+python -m helper_functions.pinecone_setup
+uv pip install -r requirements.txt
+python -m helper_functions.docs_preprocessing_for_pinecone
+streamlit run streamlit_app.py

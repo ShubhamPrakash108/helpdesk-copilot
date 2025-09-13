@@ -1,0 +1,14 @@
+transformers
+torch
+huggingface_hub[hf_xet]
+protobuf
+google-generativeai
+groq
+python-dotenv
+streamlit
+beautifulsoup4
+sentence-transformers
+pinecone
+langchain
+pinecone[grpc]
+plotly
