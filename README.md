@@ -1,6 +1,7 @@
 # Customer Support Intelligence System
 
-An AI-powered customer support system that automatically analyzes, classifies, and responds to customer tickets using sentiment analysis, priority classification, topic tagging, and intelligent document retrieval.
+An AI-powered customer support system that automatically analyzes, classifies, and responds to customer tickets using sentiment analysis, priority classification, topic tagging, and intelligent document retrieval.                        
+Deployed Link: https://sh-ubhamprakash-support-copilot-ai.streamlit.app/
 
 ## 🎯 Features
 
@@ -27,7 +28,9 @@ An AI-powered customer support system that automatically analyzes, classifies, a
 ```mermaid
 graph TD
     User([User])
+    
     App[app.py]
+    
     QueryFromDB[query_from_db.py]
     SQLiteDB[(customer_concern.db)]
     TicketResponse{Ticket Response}
@@ -35,6 +38,7 @@ graph TD
     QueryFromDBLLM[query_from_db_llm.py]
     EmbeddingsFunc[embeddings_func.py]
     PineconeDB[(Pinecone Vector DB)]
+    
     LLMGemini[llm_gemini.py]
     LLMGroq[llm_groq.py]
     GeminiAPI[Gemini API]
@@ -42,13 +46,16 @@ graph TD
     VectorResponse{Vector Response}
     
     InternalAnalysis[internal_analysis.py]
+    
     SentimentAnalysis[sentiment_analysis.py]
     Priority[priority.py]
     TopicTags[topic_tags.py]
     Emoji[emoji.py]
+    
     AnalysisResponse{Analysis Response}
     
     FinalResponse{Final Response}
+    
     StreamlitUI[Streamlit Dashboard]
     
     WebScrapper[webscrapper.py]
@@ -61,32 +68,30 @@ graph TD
     PineconeService[Pinecone Service]
     
     User --> App
-    App --> QueryFromDB
-    App --> QueryFromDBLLM
-    App --> InternalAnalysis
     
+    App --> QueryFromDB
     QueryFromDB --> SQLiteDB
     SQLiteDB --> TicketResponse
     
+    App --> QueryFromDBLLM
     QueryFromDBLLM --> EmbeddingsFunc
     EmbeddingsFunc --> PineconeDB
     PineconeDB --> VectorResponse
-    
     QueryFromDBLLM --> LLMGemini
-    QueryFromDBLLM --> LLMGroq
     LLMGemini --> GeminiAPI
-    LLMGroq --> GroqAPI
     GeminiAPI --> VectorResponse
+    QueryFromDBLLM --> LLMGroq
+    LLMGroq --> GroqAPI
     GroqAPI --> VectorResponse
     
+    App --> InternalAnalysis
     InternalAnalysis --> SentimentAnalysis
-    InternalAnalysis --> Priority
-    InternalAnalysis --> TopicTags
-    InternalAnalysis --> Emoji
-    
     SentimentAnalysis --> AnalysisResponse
+    InternalAnalysis --> Priority
     Priority --> AnalysisResponse
+    InternalAnalysis --> TopicTags
     TopicTags --> AnalysisResponse
+    InternalAnalysis --> Emoji
     Emoji --> AnalysisResponse
     
     TicketResponse --> FinalResponse
