@@ -41,7 +41,7 @@ print(f"Time taken for Pinecone query: {time.perf_counter() - t1} seconds")
 
 
 def llm_generation(prompt, context, llm = "groq"):
-    context = context[:1000]
+    context = context[:6000]
     SYSTEM_PROMPT = f"""You are a helpful AI assistant. Use the following pieces of context to answer the question at the end. 
     If you don't know the answer, just say that you don't know, don't try to make up an answer. Just tell "I don't know" and refering the concern to concerned authority.  Nothing else.
     Context: {context} 
@@ -64,4 +64,5 @@ def llm_generation(prompt, context, llm = "groq"):
 # groq_response = llm_generation("Explain me about AzureEventHub", context, llm="groq")
 
 # print("Gemini Response: ", gemini_response)
+
 # print("Groq Response: ", groq_response)
