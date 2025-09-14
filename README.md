@@ -140,7 +140,7 @@ graph TD
 ```bash
 # Clone the repository
 git clone https://github.com/ShubhamPrakash108/helpdesk-copilot.git
-cd customer-support-system
+cd helpdesk-copilot
 
 # Install dependencies
 pip install -r requirements.txt
