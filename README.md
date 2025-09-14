@@ -164,7 +164,7 @@ GROQ_API_KEY_2=your_backup_groq_api_key
 
 ## 🚀 Usage
 
-### 1. Data Preparation
+### 1. Data Preparation ( NOT REQUIRED, YOU CAN DIRECTLY RUN THE WEB APP USING THE STREAMLIT RUN APP.PY COMMAND)
 ```bash
 # Scrape documentation (optional - sample data included)
 python helper_functions/webscrapper.py
@@ -311,11 +311,7 @@ Implements a hybrid approach:
 streamlit run app.py
 ```
 
-### Production Deployment
-- **Streamlit Cloud**: Direct deployment from repository
-- **Docker**: Containerized deployment (Dockerfile not included)
-- **Cloud Platforms**: Compatible with AWS, GCP, Azure
-- **Environment Variables**: Configure through platform-specific settings
+
 
 
 
