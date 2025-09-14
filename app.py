@@ -81,7 +81,7 @@ def draw_pie_chart(df):
     fig.update_traces(textposition='inside', textinfo='percent+label')
     st.plotly_chart(fig, use_container_width=True)
 
-rag_topics = ['How-to', 'Product', ' Best practices', 'API/SDK', 'SSO']
+rag_topics = ['How-to', 'Product', 'Connector', 'Lineage', 'Connector', 'API/SDK', 'SSO', 'Glossary', 'Best practices', 'Sensitive data']
 
 if st.session_state.button_pressed == "dashboard":
 
@@ -455,4 +455,5 @@ elif st.session_state.button_pressed == "bot":
                             st.markdown(f'{llm_generation_response}</div>', unsafe_allow_html=True)
                         else:
                             st.markdown('<div class="warning-box">⚠️ This ticket is unrelated to product usage or how-to questions. The concern has been referred to the support team for further assistance.</div>', unsafe_allow_html=True)
+
 
