@@ -404,7 +404,7 @@ elif st.session_state.button_pressed == "bot":
                             st.markdown(f'<div class="analysis-card"><strong>Priority:</strong> {analysis_results["priority"]}</div>', unsafe_allow_html=True)
                             st.markdown(f'<div class="analysis-card"><strong>Topics:</strong> {analysis_results["topics"]}</div>', unsafe_allow_html=True)
 
-                            if any(topic in analysis_results["topics"] for topic in ['How-to', 'Product', 'Best practices', 'API/SDK', 'SSO']):
+                            if any(topic in analysis_results["topics"] for topic in ['How-to', 'Product', 'Connector', 'Lineage', 'Connector', 'API/SDK', 'SSO', 'Glossary', 'Best practices', 'Sensitive data']):
                             # if any(topic in rag_topics for topic in analysis_results["topics"]):
                                 from helper_functions.query_from_db_llm import llm_generation, show_metadata
 
@@ -436,7 +436,7 @@ elif st.session_state.button_pressed == "bot":
                         st.markdown(f'<div class="analysis-card"><strong>Priority:</strong> {analysis_results["priority"]}</div>', unsafe_allow_html=True)
                         st.markdown(f'<div class="analysis-card"><strong>Topics:</strong> {analysis_results["topics"]}</div>', unsafe_allow_html=True)
                         
-                        if any(topic in analysis_results["topics"] for topic in ['How-to', 'Product', 'Best practices', 'API/SDK', 'SSO']):
+                        if any(topic in analysis_results["topics"] for topic in ['How-to', 'Product', 'Connector', 'Lineage', 'Connector', 'API/SDK', 'SSO', 'Glossary', 'Best practices', 'Sensitive data']):
                         # if any(topic in rag_topics for topic in analysis_results["topics"]):
                        
                             from helper_functions.query_from_db_llm import llm_generation, show_metadata
@@ -455,5 +455,6 @@ elif st.session_state.button_pressed == "bot":
                             st.markdown(f'{llm_generation_response}</div>', unsafe_allow_html=True)
                         else:
                             st.markdown('<div class="warning-box">⚠️ This ticket is unrelated to product usage or how-to questions. The concern has been referred to the support team for further assistance.</div>', unsafe_allow_html=True)
+
 
 
