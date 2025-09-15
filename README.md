@@ -1,7 +1,7 @@
 # Customer Support Intelligence System
 
 An AI-powered customer support system that automatically analyzes, classifies, and responds to customer tickets using sentiment analysis, priority classification, topic tagging, and intelligent document retrieval.                        
-Deployed Link: https://sh-ubhamprakash-support-copilot-ai.streamlit.app/ 
+Deployed Link:  https://s-h-u-bhamprakash-support-copilot-ai.streamlit.app/
 
 ## Note: 
 The Streamlit app may take some time to load and process insights after you upload the JSON file, so please be patient. The app has been thoroughly tested and works well locally. However, in the deployed version, occasional server-side issues may occur such as the web app misbehaving or data not loading even after multiple attempts which are not present in the local environment. 
