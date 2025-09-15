@@ -1,7 +1,8 @@
 # Customer Support Intelligence System
 
 An AI-powered customer support system that automatically analyzes, classifies, and responds to customer tickets using sentiment analysis, priority classification, topic tagging, and intelligent document retrieval.
-Deplyed Link (recommended to use): https://huggingface.co/spaces/shubhamprakash108/helpdesk-copilot-final                       
+
+# Deplyed Link (recommended to use): https://huggingface.co/spaces/shubhamprakash108/helpdesk-copilot-final                       
 Deployed Link:  https://s-h-u-bhamprakash-support-copilot-ai.streamlit.app/
 
 
